@@ -22,7 +22,8 @@ is_rtd = "READTHEDOCS" in os.environ
 is_appveyor = "APPVEYOR" in os.environ
 is_azure = "CONDA_PY" in os.environ
 is_conda = "CONDA_PREFIX_1" in os.environ
-
+print(is_conda)
+print(os.environ)
 # Only include the installation dependencies if we are not running on RTD or AppVeyor or in a conda env
 if not is_rtd and not is_appveyor and not is_azure and not is_conda:
     reqs = [
